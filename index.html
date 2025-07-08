@@ -1,108 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YOUR_SITE | Portfolio Template</title>
+        <meta name="description" content="YOUR_SITE description">
+        <meta name="author" content="YOUR_NAME">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="felix">
-    <meta name="description" content="This page is a shop">
-    <title>The little Taco Shop</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" type="text/css">
+        <!-- Embed page for social media posts -->
+        <meta property="og:description" content="YOUR_SITE description">
+        <meta property="og:title" content="YOUR_SITE | Portfolio Template">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://www.YOUR_SITE.com">
+        <meta property="og:image" content="http://www.YOUR_SITE.com/img/logo.png">
+        <meta property=​"og:​site_name" content=​"YOUR_SITE.com">
 
-</head>
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@mobypixel">
+        <meta name="twitter:creator" content="@mobypixel">
+        <meta name="twitter:title" content="YOUR_SITE | Portfolio Template">
+        <meta name="twitter:description" content="YOUR_SITE description">
+        <meta name="twitter:image" content="http://www.YOUR_SITE.com/img/logo.png">
 
-<body>
-    <header>
-<H1>Welcome to The Little Taco Shop</H1>
-<nav aria-label="primary-navigation">
-   <ul>
-                <li>
-                    <a href="#about">About <abbr title="The Little Taco Shop">LTS</abbr></a>
-                </li>
-                <li>
-                    <a href="#menu">Our Menu</a>
-                </li>
-                <li>
-                    <a href="hours.html">Store Hour</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact Us</a>
-                </li>            
-            </nav>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
-       <figure> <img src="img/tacos_and_drink_400x267.png" alt="tacos and drink" title="Tacos and Drink" width="300">
-</body> <figcaption>Tacos and Drink!!!!</figcaption></figure>
-</header>
-<hr>
-<main>
-    <article id="about">
-        <h2>About <abbr title="The Little Taco Shop">LTS</abbr></h2>
-    
-            <p><abbr title="The Lttle Taco Shop">LTS</abbr> was founded in <time datetime="2022">2022</time>. Our shop was built from a <strong>love of tacos</strong> 🌮🌮🌮. We hope our shop adds a unique and interesting place to our little town.</p>
- 
-            <aside>
-            <h3>Taco Trivia</h3>
-            <details>
-            <summary>When did tacos first appear in the United Stated?</summary>
-            <p>Jeffrey M. Pilcher, taco historian and professor of history at the University of Minnesota, says
-                the earliest mention of tacos in the United States are in a newspaper from <time
-                    datetime="1905">1905</time>. (Source: <cite><a
-                        href="https://www.smithsonianmag.com/arts-culture/where-did-the-taco-come-from-81228162/"
-                        target="_blank">Smithsonian Magazine</a></cite>)</p>
-</details>
-</aside>
-    </article>
-    <hr>
-    <article id="menu">
-        <h2>Our Menu</h2>
-<table><!---需要重溫表格如何寫-->
-    <caption>Our Tacos</caption>
-    <thead><tr>
-        <th scope="col">Tacos</th>
-        <th scope="col">Qty</th>
-        <th scope="col">Price</th>
-    </tr></thead>
-    <tbody>
-        <tr>
-            <th scope="row">&nbsp;</th>
-            <th scope="row">1</th>
-            <th scope="row">$1.50</th>
-        </tr>
-        <tr><th scope="row">Crunchy</th>
-            <th scope="row">2</th>
-            <th scope="row">$2.50</th>
-        </tr>
-        <tr>
-            <th scope="row">&nbsp;</th>
-            <th scope="row">3</th>
-            <th scope="row">$3.25</th></tr>
+        <!-- Page Style -->
+        <link rel="stylesheet" type="text/css" href="style.css?version=1">    </head>
 
-            <th scope="row">&nbsp;</th>
-            <th scope="row">1</th>
-            <th scope="row">$2.00</th>
-        </tr>
-        <tr>
-            <th scope="row">Soft</th>
-            <th scope="row">2</th>
-            <th scope="row">3.50</th>
-        </tr>
-        <tr>
-            <th scope="row">&nbsp;</th>
-            <th scope="row">3</th>
-            <th scope="row">$4.50</th>
-        </tr>
-        <tr><td rowspan="3">Chips & Salsa $2</td></tr>
-    </tbody>
-</table>
-<br>
-<p><a href="#">back to the top</a></p>
+    <body>
 
-    </article>
-<hr>
-</main>
+        <!-- Navigation Bar -->
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="rightVerticalLine">YOURSITE.COM</a>
+            <a href="image-example.html">Image Page Example</a>
+            <a href="text-example.html">Text Page Example</a>
+            <a href="javascript:void(0);" class="icon leftVerticalLine" onclick="myFunction()"><img src="img/menu.png" height="30" width="30" alt="Menu Button" aria-label="Menu Button"></img>
+            </a>
+        </div>
 
-<footer>
+        <!-- Header with Image & Text -->
+        <div class="hero-image" style="background-image: url('img/header-bg.jpg');">
+            <div class="coverDiv">
+                <img class="coverArt rounded" src="img/logo.png" alt="Logo" height="350" width="350"></img>
+                <div class="hero-text">
+                    <h1>Portfolio Template</h1>
+                    <h3>Simple HTML, Open Source Project</h3>
+                </div>
+            </div>
+        </div>
 
-    <p>Copyright © The Little Taco Shop</p>
-</footer>
+        <!-- Description Section -->
+        <div class="descriptionDiv">
+
+            <!-- Section -->
+            <h2>Project Grid</h2>
+
+            <!-- Portfolio Grid -->
+            <div class="grid">
+
+                <!-- Portfolio Item -->
+                <a href="image-example.html" class="card">
+                    <div class="content">
+                        <img src="img/card1.jpg" alt="Card Image" height="390" width="390"></img>
+                        <div class="card-body">
+                            <div class="subtitle">CATEGORY</div>
+                            <div class="title">Card Title</div>
+                            <div class="description">Short Description</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item -->
+                <a href="image-example.html" class="card">
+                    <div class="content">
+                        <img src="img/card2.jpg" alt="Card Image" height="390" width="390"></img>
+                        <div class="card-body">
+                            <div class="subtitle">CATEGORY</div>
+                            <div class="title">Card Title</div>
+                            <div class="description">Short Description</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item -->
+                <a href="image-example.html" class="card">
+                    <div class="content">
+                        <img src="img/card3.jpg" alt="Card Image" height="390" width="390"></img>
+                        <div class="card-body">
+                            <div class="subtitle">CATEGORY</div>
+                            <div class="title">Card Title</div>
+                            <div class="description">Short Description</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item -->
+                <a href="image-example.html" class="card">
+                    <div class="content">
+                        <img src="img/card4.jpg" alt="Card Image" height="390" width="390"></img>
+                        <div class="card-body">
+                            <div class="subtitle">CATEGORY</div>
+                            <div class="title">Card Title</div>
+                            <div class="description">Short Description</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item -->
+                <a href="image-example.html" class="card">
+                    <div class="content">
+                        <img src="img/card5.jpg" alt="Card Image" height="390" width="390"></img>
+                        <div class="card-body">
+                            <div class="subtitle">CATEGORY</div>
+                            <div class="title">Card Title</div>
+                            <div class="description">Short Description</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item -->
+                <a href="image-example.html" class="card">
+                    <div class="content">
+                        <img src="img/card6.jpg" alt="Card Image" height="390" width="390"></img>
+                        <div class="card-body">
+                            <div class="subtitle">CATEGORY</div>
+                            <div class="title">Card Title</div>
+                            <div class="description">Short Description</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item -->
+                <a href="image-example.html" class="card">
+                    <div class="content">
+                        <img src="img/card7.jpg" alt="Card Image" height="390" width="390"></img>
+                        <div class="card-body">
+                            <div class="subtitle">CATEGORY</div>
+                            <div class="title">Card Title</div>
+                            <div class="description">Short Description</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item -->
+                <a href="image-example.html" class="card">
+                    <div class="content">
+                        <img src="img/card8.jpg" alt="Card Image" height="390" width="390"></img>
+                        <div class="card-body">
+                            <div class="subtitle">CATEGORY</div>
+                            <div class="title">Card Title</div>
+                            <div class="description">Short Description</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Section -->
+            <h2>Image Grid</h2>
+
+            <!-- Image Grid -->
+            <div class="grid">
+
+                <!-- Image Item -->
+                <div class="item">
+                    <div class="content">
+                        <img  src="img/image1.jpg" alt="Image" height="594" width="390"></img>
+                    </div>
+                </div>
+
+                <!-- Image Item -->
+                <div class="item">
+                    <div class="content">
+                        <img  src="img/image2.jpg" alt="Image" height="594" width="390"></img>
+                    </div>
+                </div>
+
+                <!-- Image Item -->
+                <div class="item">
+                    <div class="content">
+                        <img  src="img/image3.jpg" alt="Image" height="594" width="390"></img>
+                    </div>
+                </div>
+
+                <!-- Image Item -->
+                <div class="item">
+                    <div class="content">
+                        <img  src="img/image4.jpg" alt="Image" height="594" width="390"></img>
+                    </div>
+                </div>
+
+                <!-- Image Item -->
+                <div class="item">
+                    <div class="content">
+                        <img  src="img/image5.jpg" alt="Image" height="594" width="390"></img>
+                    </div>
+                </div>
+
+                <!-- Image Item -->
+                <div class="item">
+                    <div class="content">
+                        <img  src="img/image6.jpg" alt="Image" height="594" width="390"></img>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <h2>Full-Size Item</h2>
+
+            <!-- Full-Size Image -->
+            <img class="img-full" src="img/logo.png" alt="Image" height="512" width="512"></img>
+
+            <!-- Section -->
+            <h2>Full-Size Video</h2>
+
+            <!-- Full-Size Video -->
+            <video width="100%" controls="">
+                <source src="videos/Sample.mp4" type="video/mp4">
+            </video>
+
+            <!-- Section -->
+            <h2>Markup Examples</h2>
+            <h1>&lt;h1&gt;</h1>
+            <h2>&lt;h2&gt;</h2>
+            <h3>&lt;h3&gt;</h3>
+            <h4>&lt;h4&gt;</h4>
+            <p>&lt;p&gt;</p>
+
+            <!-- Section -->
+            <h2>About This Project</h2>
+            <p>Simple HTML Portfolio Template is an Open Source page to create an easy site for your work. No fluff or unnecessary code bloat. It's minimal and built to be easily customized and maintained. Visit <a href="https://github.com/NickCulbertson/Simple-HTML-Portfolio-Template" target="_blank">Github</a> to get the template and start making it your own. Watch the tutorial video for a quick explanation on what does what.</p>
+
+            <p>I'm making this template Open Source because I want to empower creatives to support themselves. I hope it helps make your first impression for your followers most triumphant! If you have any questions, suggestions, or feedback please send them my way. This is as much for me as it is for you. If you use it, send me a link! I'd love to see your work.</p>
+
+            <p>Enjoy!</p>
+
+            <p style="text-align: right;"><strong>- Nick Culbertson</strong><br>
+            <a href="https://www.twitter.com/mobypixel" target="_blank">@MobyPixel</a></p>
+
+            <!-- Section -->
+            <h2>Features</h2>
+            <p>
+            • Clean Mobile-First Design<br>
+            • Attractive Social Media Embeds<br>
+            • Supports Light & Dark Mode<br>
+            • Easy to Use<br>
+            • Fully Customizable & Open Source
+            </p>
+
+        </div>
+
+        <!-- Share Your Socials -->
+        <div class="textBubbleDiv">
+            <p class="light">Follow @YourName :
+            <a href="https://www.twitter.com/YOUR_NAME" target="_blank"><img class="socialLink" src="img/twitter.png" alt="Twitter" height="25" width="25"></img></a>
+            <a href="https://www.facebook.com/YOUR_NAME" target="_blank"><img class="socialLink" src="img/facebook.png" alt="Facebook" height="25" width="25"></img></a>
+            <a href="https://www.youtube.com/YOUR_NAME" target="_blank"><img class="socialLink2" src="img/youtube.png" alt="YouTube" height="25" width="25"></img></a>
+            </p>
+        </div>
+
+        <div class="contact">
+            <div class="contact-body">
+                <!-- Section -->
+                <h2>Contact</h2>
+                <p>Tap the email address to send a message. We look forward to hearing from you.</p>
+                <p><strong><a href="mailto:hello@yoursite.com">hello@yoursite.com</a></strong></p>
+            </div>
+        </div>
+
+        <!-- Feel free to put your own text here or share the love. -->
+        <div class="footer">
+            <p class="subtle"><i>Get an open source Portfolio template <a href="https://github.com/NickCulbertson/Simple-HTML-Portfolio-Template" target="_blank" aria-label="Download Portfolio Template Button">here</a>.</i></p>
+        </div>
+
+        <!-- Navigation Script -->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </body>
 </html>
