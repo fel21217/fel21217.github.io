@@ -88,13 +88,13 @@ h4 a:hover {
 }
 
 .coverDiv {
-    height: 600px;
+    height: 400px;
     position: relative;
     padding-top: 40px;
 }
 
 .coverDivFull {
-    height: 600px;
+    height: 400px;
     position: relative;
 }
 
@@ -165,9 +165,9 @@ h4 a:hover {
 .card {
     text-decoration: none;
     position: relative;
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-    max-width: 25%;
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
 }
 
 .item {
@@ -330,7 +330,7 @@ h4 a:hover {
 }
 
 .hero-image {
-    height: 600px;
+    height: 450px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -416,6 +416,41 @@ h4 a:hover {
     border-left: thin solid #555555;
 }
 
+/* new added*/
+ .grid-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .column {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .column h2 {
+      margin-top: 0;
+      color: #292929;
+    }
+
+    .column p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+
+
 @media screen and (max-width: 1200px) {
     .card {
         -ms-flex: 33.33333%; /* IE10 */
@@ -456,6 +491,10 @@ h4 a:hover {
         flex: 100%;
         max-width: 100%;
         
+    }
+/*new added*/
+    .grid-container {
+      grid-template-columns: 1fr; /* Stack to one column */
     }
 }
 
