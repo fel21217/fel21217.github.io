@@ -306,6 +306,16 @@ h4 a:hover {
     padding: 0px;
 }
 
+.grid .item img {
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+.grid .item img:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+
 .img-full {
     max-width: 100%;
     height: auto;
