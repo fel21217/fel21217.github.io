@@ -293,27 +293,7 @@ h4 a:hover {
     -webkit-transform: translateZ(0);
 }
 
-.item img {
-    color: white;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-top: 10px;
-    padding: 0px;
-}
 
-.grid .item img {
-    transition: filter 0.3s ease; /* Smooth transition */
-}
-
-.grid .item img:hover {
-    filter: brightness(1.2);
-    transform: scale(1.01);
-}
 
 
 .img-full {
@@ -472,6 +452,63 @@ h4 a:hover {
       color: #555;
     }
 
+.image-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.image-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.image-link:hover img {
+    filter: brightness(1.2);
+    transform: scale(1.01);
+}
+
+.image-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none; /* click still works */
+}
+
+.item img {
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+.grid .item img {
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+/* Apply hover effect to both image and text */
+.image-link:hover img {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.image-link:hover .image-title {
+    opacity: 1; /* fade in text */
+    transform: translate(-50%, -50%) scale(1.05); /* slight zoom on text too */
+}
 
 
 @media screen and (max-width: 1200px) {
