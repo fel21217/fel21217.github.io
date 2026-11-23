@@ -65,7 +65,8 @@
     border: 4px solid rgba(211,207,205,1);
     position: absolute;
     top: 0;
-    right: -14px;
+    /* 33px dot centred on the 3px line: 16.5 + 1.5 */
+    right: -18px;
     z-index: 1;
 }
 .main-timeline .timeline:last-child:before{
@@ -74,8 +75,8 @@
 }
 .main-timeline .timeline:last-child:nth-child(even):before{
     right: auto;
-    left: -12px;
-    bottom: -2px;
+    left: -15px;
+    bottom: 0;
 }
 .main-timeline .timeline-content{
     text-align: center;
@@ -156,7 +157,7 @@
 .main-timeline .content{
     display: table;
     padding-right: 40px;
-    position: relative;
+    position: static; /* dot is placed from the entry edge, not the text */
 }
 .main-timeline .year{
     display: block;
@@ -186,7 +187,7 @@
     border: 4px solid rgba(211,207,205,1);
     position: absolute;
     top: 78px;
-    right: -14px;
+    right: -18px;
 }
 .main-timeline .icon:before{
     content: "";
@@ -248,7 +249,7 @@
 }
 .main-timeline .timeline:nth-child(2n) .icon{
     right: auto;
-    left: -14px;
+    left: -15px;
 }
 .main-timeline .timeline:nth-child(2n) .icon:before,
 .main-timeline .timeline:nth-child(2n) .icon span:before,
@@ -275,100 +276,103 @@
 .main-timeline .timeline:last-child:nth-child(even){
     margin: 0;
 }
+/* Phones & tablets: single column, line on the left, a dot per entry */
 @media only screen and (max-width: 990px){
-    .main-timeline:before{ left: 100%; }
-    .main-timeline .timeline{
-        width: 100%;
-        float: none;
-        margin-bottom: 20px !important;
+    .main-timeline{
+        margin: 10px 16px;
+        padding-left: 30px;
     }
-    .main-timeline .timeline:first-child:before,
-    .main-timeline .timeline:last-child:before{
-        left: auto !important;
-        right: -13px !important;
-    }
-    .main-timeline .timeline:nth-child(2n) .circle{
-        float: left;
-        margin: 0 25px 0 0;
-    }
-    .main-timeline .timeline:nth-child(2n) .circle:before{
-        right: -33px;
-        left: auto;
-        box-shadow: 7px 0 9px -7px #444 inset;
-    }
-    .main-timeline .timeline:nth-child(2n) .circle span:before,
-    .main-timeline .timeline:nth-child(2n) .circle span:after{
-        right: -33px;
-        left: auto;
-        border-radius: 0 0 0 21px;
-    }
-    .main-timeline .timeline:nth-child(2n) .circle span:after{
-        border-radius: 21px 0 0 0;
-    }
-    .main-timeline .timeline:nth-child(2n) .content{
-        padding: 0 40px 0 0;
-        margin-left: 0;
-    }
-    .main-timeline .timeline:nth-child(2n) .icon{
-        right: -14px;
-        left: auto;
-    }
-    .main-timeline .timeline:nth-child(2n) .icon:before,
-    .main-timeline .timeline:nth-child(2n) .icon span:before,
-    .main-timeline .timeline:nth-child(2n) .icon span:after{
-        left: -15px;
-        right: auto;
-    }
-    .main-timeline .timeline:nth-child(2n) .icon span:before{
-        border-radius: 0 0 21px 0;
-    }
-    .main-timeline .timeline:nth-child(2n) .icon span:after{
-        border-radius: 0 21px 0 0;
-    }
+    .main-timeline:before{ left: 12px; }
+    .main-timeline .timeline,
     .main-timeline .timeline:nth-child(2),
     .main-timeline .timeline:nth-child(odd),
     .main-timeline .timeline:nth-child(even){
-        margin: 0;
+        width: 100%;
+        float: none;
+        margin: 0 0 30px !important;
     }
-}
-@media only screen and (max-width: 480px){
-    .main-timeline:before{ left: 0; }
+    /* start/end dots of the desktop layout are replaced by one dot per entry */
     .main-timeline .timeline:first-child:before,
     .main-timeline .timeline:last-child:before{
-        left: -12px !important;
-        right: auto !important;
+        display: none;
     }
+    .main-timeline .timeline-content,
+    .main-timeline .timeline:nth-child(2n) .timeline-content{
+        float: none;
+        margin-top: 0;
+        text-align: left;
+    }
+    .main-timeline .timeline-content:before{ display: none; }
+    .main-timeline .timeline-content:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    /* smaller picture beside the heading */
     .main-timeline .circle,
     .main-timeline .timeline:nth-child(2n) .circle{
-        width: 130px;
-        height: 130px;
-        float: none;
-        margin: 0 auto;
-    }
-    .main-timeline .timeline-content:before{
-        width: 99.5%;
-        top: 68px;
-        left: 0.5%;
-    }
-    .main-timeline .circle span{
-        line-height: 115px;
-        font-size: 60px;
+        width: 90px;
+        height: 90px;
+        border-width: 5px;
+        float: left;
+        margin: 0 15px 10px 0;
+        top: 0;
     }
     .main-timeline .circle:before,
     .main-timeline .circle span:before,
-    .main-timeline .circle span:after,
-    .main-timeline .icon{
+    .main-timeline .circle span:after{
         display: none;
+    }
+    .main-timeline .circle span{
+        line-height: 0;
+        font-size: 0;
+    }
+    .main-timeline .circle .img{
+        display: block;
+        height: 100%;
+        object-fit: cover;
     }
     .main-timeline .content,
     .main-timeline .timeline:nth-child(2n) .content{
-        padding: 0 10px;
+        display: block;
+        position: static;
+        padding: 0;
+        margin-left: 0;
     }
+    /* badge and title sit beside the picture; text wraps below it */
     .main-timeline .year{
-        margin-bottom: 15px;
+        display: flow-root;
+        margin: 0 0 8px 0;
+        padding: 6px 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .main-timeline .title{
+        display: flow-root;
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 10px;
     }
     .main-timeline .description{
-        text-align: center;
+        clear: both;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: left;
+    }
+    /* dot on the line, level with the picture */
+    .main-timeline .icon,
+    .main-timeline .timeline:nth-child(2n) .icon{
+        width: 14px;
+        height: 14px;
+        border-width: 3px;
+        top: 38px;
+        left: -27px;
+        right: auto;
+    }
+    .main-timeline .icon:before,
+    .main-timeline .icon span:before,
+    .main-timeline .icon span:after{
+        display: none;
     }
 }
 
@@ -382,6 +386,9 @@
      {
     display: none;
   }
+    .main-timeline .description{
+        color: rgb(210,210,214);
+    }
 }
 
     </style>
@@ -432,7 +439,7 @@
                             <p class="description">
                                 ERP:<br>
                                 - connection between ERP and store<br>
-                                - data (products catalog,stock, product attributes)<br>
+                                - data (products catalog,stock, product attributes)<br></p>
                             <p class="description">
                                 Artwork:<br>
                                 - website banners, website Gif, product image<br></p>
@@ -445,7 +452,6 @@
                                 Project<br>
                                 includes:
                                 </p>
-                            </p>
                             <div class="icon"><span></span></div>
                         </div>
                     </div>
@@ -468,7 +474,6 @@
                                 -Social Media management<br>
                                 -HK post flyers<br>
                             </p>
-                                                        </p>
                             <p class="description">
                                 Artwork<br>
                                 -Fb & google AD design<br>
